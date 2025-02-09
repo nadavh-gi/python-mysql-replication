@@ -53,7 +53,7 @@ execute(conn, "CREATE TABLE test (i INT) ENGINE = MEMORY")
 execute(conn, "INSERT INTO test VALUES(1)")
 execute(conn, "CREATE TABLE test2 (i INT) ENGINE = MEMORY")
 execute(conn, "INSERT INTO test2 VALUES(1)")
-execute(conn, "RESET MASTER")
+execute(conn, "RESET BINARY LOGS AND GTIDS")
 
 
 if os.fork() != 0:
